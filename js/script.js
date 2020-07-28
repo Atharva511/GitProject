@@ -18,8 +18,18 @@ function ready(){
 	for (var i = 0; i < quantityInputs.length; i++) {
 		var input = quantityInputs[i]
 		input.addEventListener('change',quantityChanged)
-	
 	}
+	
+	//document.getElementById('btn').addEventListener('click',purchaseClicked)//
+}
+function purchaseClicked(){
+	alert("Thank You for your purchase")
+	var cartItems= document.getElementsByClassName('Cart-items')[0]
+	while(cartItems.hasChildNodes()){
+		cartItems.removeChild(cartItems.firstChild)
+	}
+	updateCartTotal()
+
 }
 function removeCartItem(event) {
 	var buttonClicked = event.target

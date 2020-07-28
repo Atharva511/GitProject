@@ -569,6 +569,15 @@ span.psw a:visited {
     /*background: url('../images/jumbotron_992.jpg') no-repeat;*/
     height: 458px;
   }
+ 
+}
+@media(min-width: 577px) and (max-width: 991px){
+    .container .jumbotron {
+        height: 300px;
+    }
+    #Cart1{
+        width: 90%
+    }
 }
 @media(max-width: 576px){
 .container .jumbotron{
@@ -581,9 +590,24 @@ span.psw a:visited {
 .text-block{
 	margin:10px;
 }
+.cart-item-price .cart-item-title{
+    font-size: 0.8em;
+}
+#Cart1{
+    width: 100%;
+}
+}
     
 }
-@media(max-width:433px ) and (min-width: 384px){
+@media(max-width: 769px) and (min-width: 577px){
+    #Cart1{
+        width: 100%;
+    }
+     .cart-row{
+        width:100%;
+    }
+}
+@media(max-width: 433px ) and (min-width: 384px){
     .figcaption{
         font-size: 0.9em;
         margin: auto;
@@ -592,10 +616,16 @@ span.psw a:visited {
         padding-top: 3px;
         margin-top: 3px;    
     }
+    .cart-item-image{
+    width: 50px;
+    height :50px;
+    }
+
 }
 footer{
 	margin-top: 50px;
 }
+
 @media screen and (max-width: 300px) { 
         span.psw { 
             display: block; 

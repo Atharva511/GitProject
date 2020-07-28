@@ -8,22 +8,25 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/script.js" async></script>
 </head>
 <body>
 	<header>
 		<div><img class="image-responsive" src="../images/Icon1.png" alt="Icon"></div>
 		<div><a href="../index.html"><h1>SUPERMART</h1></a></div>
+        <div class="dropdown">
+            <button onclick="AccountDetails()" class="dropbtn"><img src="../images/Account.png"></button>
+            <div id="Account" class ="dropdown-content">
+                <span style="padding: 10px;padding-right: 0px; font-size: 1.1em;">Log out!</span>
+                <span style="padding: 10px;padding-right: 0px; font-size: 1.1em;"><a href="../snippets/Login.html"> Sign in!</a></span>
+            </div>
+        </div>
 		<div class="dropdown">
-			<button class="dropbtn"><img src="../images/Account.png"></button>
-			<div class ="dropdown-content">
-				<span>Log out!</span>
-			</div>
-		</div>
-		<div class="dropdown">
-			<button class="dropbtn "><img src="../images/Cart.png"></button>
-			<div class="dropdown-content">
-			</div>
-		</div> 		
+            <button class="dropbtn "><a href="#Cart1"><img src="../images/Cart.png"></a></button>
+            <div id="Cart" class="dropdown-content">
+            
+            </div>
+        </div> 		
 	</header>	
 	<div id="Stationery" class="container-fluid">
 	<h2>Stationery</h2>
@@ -31,79 +34,98 @@
         <div id="tiles" class="container">  
             <div class="row">
                 <div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-                    <figure class="figure">
-                        <img class="image-responsive" src="../images/NoteBook.jpg" width="150"
+                    <figure class="figure cart-items">
+                        <img class="image-responsive item-image" src="../images/NoteBook.jpg" width="150"
                         height="150" alt="Notebooks">
                         <figcaption class="figcaption">Notebooks</figcaption>
-                        <span>&#8377 60 per Notebook</span>  
-                    </figure>   
-                </div>
-                <div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-                    <figure class="figure">
-                        <img class="image-responsive" src="../images/Pen.jpg" width="150" height="150" alt="Pens">
-                        <figcaption class="figcaption">Pens</figcaption>
-                        <span>&#8377 10 per Pen</span>
+                        <span class="item-price">Rs 60</span>  
                     </figure>
+                    <button class="AddCart">Add to Cart</button>   
                 </div>
                 <div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-                    <figure class="figure">
-                        <img class="image-responsive" src="../images/Stapler.jpg" width="150"
+                    <figure class="figure cart-items">
+                        <img class="image-responsive item-image" src="../images/Pen.jpg" width="150" height="150" alt="Pens">
+                        <figcaption class="figcaption">Pens</figcaption>
+                        <span class="item-price">Rs 10</span>
+                    </figure>
+                    <button class="AddCart">Add to Cart</button>
+                </div>
+                <div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
+                    <figure class="figure cart-items">
+                        <img class="image-responsive item-image" src="../images/Stapler.jpg" width="150"
                         height="150" alt="Stapler">
                         <figcaption class="figcaption">Stapler</figcaption>
-                        <span>&#8377 20 per Stapler</span>
+                        <span class="item-price">Rs 20</span>
                     </figure>
+                    <button class="AddCart">Add to Cart</button>
                 </div>  
                 <div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-                    <figure class="figure">
-                        <img class="image-responsive" src="../images/RubberBands.jpg" width="150" height="150" alt="Rubber Bands">
+                    <figure class="figure cart-items">
+                        <img class="image-responsive item-image" src="../images/RubberBands.jpg" width="150" height="150" alt="Rubber Bands">
                         <figcaption class="figcaption">Rubber Bands</figcaption>
-                        <span>&#8377 10 per pack</span>
-                    </figure>           
+                        <span class="item-price">Rs 10</span>
+                    </figure> 
+                    <button class="AddCart">Add to Cart</button>          
                 </div>
                 <div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-                    <figure class="figure">
-                        <img class="image-responsive" src="../images/A4Sheets.jpg" width="150" height="150" alt="A4 sheets">
+                    <figure class="figure cart-items">
+                        <img class="image-responsive item-image" src="../images/A4Sheets.jpg" width="150" height="150" alt="A4 sheets">
                         <figcaption class="figcaption">A4 sheets</figcaption>
-                        <span>&#8377 50 per pack</span>
+                        <span class="item-price">Rs 50</span>
                     </figure>
+                    <button class="AddCart">Add to Cart</button>
                 </div>  
                 <div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-                    <figure class="figure">
-                        <img class="image-responsive" src="../images/DrawingSheets.jpg" width="150" height="150" alt="Drawing sheets">
+                    <figure class="figure cart-items">
+                        <img class="image-responsive item-image" src="../images/DrawingSheets.jpg" width="150" height="150" alt="Drawing sheets">
                         <figcaption class="figcaption">Drawing sheets</figcaption>
-                        <span>&#8377 20 per sheet</span>
+                        <span class="item-price">Rs 20</span>
                     </figure>
+                    <button class="AddCart">Add to Cart</button>
                 </div>
                 <div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-                    <figure class="figure"> 
-                        <img class="image-responsive" src="../images/Balloons.jpg" width="150" height="150" alt="Balloons">
+                    <figure class="figure cart-items"> 
+                        <img class="image-responsive item-image" src="../images/Balloons.jpg" width="150" height="150" alt="Balloons">
                         <figcaption class="figcaption">Balloons</figcaption>
-                        <span>&#8377 100 per pack</span>
+                        <span class="item-price">Rs 100</span>
                     </figure>
+                    <button class="AddCart">Add to Cart</button>
                 </div>
                 <div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-                    <figure class="figure">
-                        <img class="image-responsive" src="../images/ClothBag.jpg" width="150" height="150" alt="Cloth Bags">
+                    <figure class="figure cart-items">
+                        <img class="image-responsive item-image" src="../images/ClothBag.jpg" width="150" height="150" alt="Cloth Bags">
                         <figcaption class="figcaption">Cloth Bags</figcaption>
-                        <span>&#8377 10 per Bag</span>
+                        <span class="item-price">Rs 10</span>
                     </figure>
+                    <button class="AddCart">Add to Cart</button>
                 </div>
                 <div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-                    <figure class="figure"> 
-                        <img class="image-responsive" src="../images/Pencil.jpg" width="150" height="150" alt="Pencils">
+                    <figure class="figure cart-items"> 
+                        <img class="image-responsive item-image" src="../images/Pencil.jpg" width="150" height="150" alt="Pencils">
                         <figcaption class="figcaption">Pencils</figcaption>
-                        <span>&#8377 10 per pack</span>
+                        <span class="item-price">Rs 10</span>
                     </figure>
+                    <button class="AddCart">Add to Cart</button>
                 </div>
                 <div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-                    <figure class="figure"> 
-                        <img class="image-responsive" src="../images/Crayon.jpg" width="150" height="150" alt="Crayons">
+                    <figure class="figure cart-items"> 
+                        <img class="image-responsive item-image" src="../images/Crayon.jpg" width="150" height="150" alt="Crayons">
                         <figcaption class="figcaption">Crayons</figcaption>
-                        <span>&#8377 20 per pack</span>
+                        <span class="item-price">Rs 20</span>
                     </figure>
+                    <button class="AddCart">Add to Cart</button>
                 </div>           
             </div>
         </div>
+    </div>
+    <h2>Cart of your Stationery</h2>
+    <div id="Cart1" class="Cart-items container">
+
+        
+    </div>
+    <div class ="cart-total">
+        <strong class="cart-total-title"> Total:</strong>
+        <span class="cart-total-price">Rs 0 </span>
     </div>
 
 

@@ -9,20 +9,23 @@
 	<title>Supermarket-Home essentials</title>
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/styles.css">
+	<script src="../js/script.js" async></script>
 </head>
 <body>
 	<header>
-		<div><img class="image-responsive" src="../images/Icon1.png" alt="Icon"></div>
+		<div><img class="image-responsive1" src="../images/Icon1.png" alt="Icon"></div>
 		<div><a href="../index.html"><h1>SUPERMART</h1></a></div>
 		<div class="dropdown">
-			<button class="dropbtn"><img src="../images/Account.png"></button>
-			<div class ="dropdown-content">
-				<span>Log out!</span>
-			</div>
+			<button onclick="AccountDetails()" class="dropbtn"><img src="../images/Account.png"></button>
+			<div id="Account" class ="dropdown-content">
+                <span style="padding: 10px;padding-right: 0px; font-size: 1.1em;">Log out!</span>
+                <span style="padding: 10px;padding-right: 0px; font-size: 1.1em;"><a href="../snippets/Login.html"> Sign in!</a></span>
+            </div>
 		</div>
 		<div class="dropdown">
-			<button class="dropbtn "><img src="../images/Cart.png"></button>
-			<div class="dropdown-content">
+			<button class="dropbtn "><a href="#Cart1"><img src="../images/Cart.png"></a></button>
+			<div id = "Cart" class="dropdown-content">
+
 			</div>
 		</div> 		
 	</header>
@@ -32,75 +35,106 @@
 		<div id="tiles" class="container">	
 			<div class="row">
 				<div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-					<figure class="figure">
-						<img class="image-responsive" src="../images/TableCloth.jpg" width="150" height="150" alt="Table cloth">
-						<figcaption class="figcaption">Table cloth</figcaption><br>
-					</figure>	
+					<figure class="figure cart-items">
+						<img class="image-responsive item-image" src="../images/TableCloth.jpg" width="150" height="150" alt="Table cloth">
+						<figcaption class="figcaption">Table cloth</figcaption>
+						<span class="item-price">Rs 30</span>
+					</figure>
+					<button class="AddCart">Add to Cart</button>	
 				</div>
 				<div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-					<figure class="figure">
-						<img class="image-responsive" src="../images/Bottles.jpg" width="150" height="150" alt="Bottles">
-						<figcaption class="figcaption">Bottles</figcaption><br>
+					<figure class="figure cart-items">
+						<img class="image-responsive item-image" src="../images/Bottles.jpg" width="150" height="150" alt="Bottles">
+						<figcaption class="figcaption">Bottles</figcaption>
+						<span class="item-price">Rs 20</span>
 					</figure>
+					<button class="AddCart">Add to Cart</button>
 				</div>
 				<div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-					<figure class="figure">
-						<img class="image-responsive" src="../images/StereoSet.jpg" width="150" height="150" alt="Stereo set">
-						<figcaption class="figcaption">Stereo set</figcaption><br>
+					<figure class="figure cart-items">
+						<img class="image-responsive item-image" src="../images/StereoSet.jpg" width="150" height="150" alt="Stereo set">
+						<figcaption class="figcaption">Stereo set</figcaption>
+						<span class="item-price">Rs 50000</span>
 					</figure>
+					<button class="AddCart">Add to Cart</button>
 				</div>	
 				<div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-					<figure class="figure">
-						<img class="image-responsive" src="../images/WallUnit.jpg" width="150" height="150" alt="Wall Unit">
-						<figcaption class="figcaption">Wall-Unit</figcaption><br>
-					</figure>			
+					<figure class="figure cart-items">
+						<img class="image-responsive item-image" src="../images/WallUnit.jpg" width="150" height="150" alt="Wall Unit">
+						<figcaption class="figcaption">Wall-Unit</figcaption>
+						<span class="item-price">Rs 40000</span>
+					</figure>
+					<button class="AddCart">Add to Cart</button>			
 				</div>
 				<div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-					<figure class="figure">
-						<img class="image-responsive" src="../images/Bulb.jpg" width="150" height="150" alt="Bulbs">
-						<figcaption class="figcaption">Bulbs</figcaption><br>
+					<figure class="figure cart-items">
+						<img class="image-responsive item-image" src="../images/Bulb.jpg" width="150" height="150" alt="Bulbs">
+						<figcaption class="figcaption">Bulbs</figcaption>
+						<span class="item-price">Rs 40</span>
 					</figure>
+					<button class="AddCart">Add to Cart</button>
 				</div>	
 				<div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-					<figure class="figure">
-						<img class="image-responsive" src="../images/Switch.jpg" width="150" height="150" alt="Switches and switch Boards">
-						<figcaption class="figcaption">Switches and Switch Boards</figcaption><br>
+					<figure class="figure cart-items">
+						<img class="image-responsive item-image" src="../images/Switch.jpg" width="150" height="150" alt="Switches and switch Boards">
+						<figcaption class="figcaption">Switches and Switch Boards</figcaption>
+						<span class="item-price">Rs 20</span>
 					</figure>
+					<button class="AddCart">Add to Cart</button>
 				</div>
 				<div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-					<figure class="figure">	
-						<img class="image-responsive" src="../images/Bed.jpg" width="150" height="150" alt="Bed">
-						<figcaption class="figcaption">Bed</figcaption><br>
+					<figure class="figure cart-items">	
+						<img class="image-responsive item-image" src="../images/Bed.jpg" width="150" height="150" alt="Bed">
+						<figcaption class="figcaption">Bed</figcaption>
+						<span class="item-price">Rs 40000</span>
 					</figure>
+					<button class="AddCart">Add to Cart</button>
 				</div>
 				<div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-					<figure class="figure">
-						<img class="image-responsive" src="../images/Mats.jpg" width="150" height="150" alt="Mats">
-						<figcaption class="figcaption">Mats</figcaption><br>
+					<figure class="figure cart-items">
+						<img class="image-responsive item-image" src="../images/Mats.jpg" width="150" height="150" alt="Mats">
+						<figcaption class="figcaption">Mats</figcaption>
+						<span class="item-price">Rs 50</span>
 					</figure>
+					<button class="AddCart">Add to Cart</button>
 				</div>
 				<div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-					<figure class="figure">	
-						<img class="image-responsive" src="../images/Plants.jpg" width="150" height="150" alt="Plants">
-						<figcaption class="figcaption">Plants</figcaption><br>
+					<figure class="figure cart-items">	
+						<img class="image-responsive item-image" src="../images/Plants.jpg" width="150" height="150" alt="Plants">
+						<figcaption class="figcaption">Plants</figcaption>
+						<span class="item-price">Rs 100</span>
 					</figure>
+					<button class="AddCart">Add to Cart</button>
 				</div>
 				<div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-					<figure class="figure">
-						<img class="image-responsive" src="../images/Tins.jpg" width="150" height="150" alt="Tins">
-						<figcaption class="figcaption">Tins</figcaption><br>
+					<figure class="figure cart-items">
+						<img class="image-responsive item-image" src="../images/Tins.jpg" width="150" height="150" alt="Tins">
+						<figcaption class="figcaption">Tins</figcaption>
+						<span class="item-price">Rs 20</span>
 					</figure>
+					<button class="AddCart">Add to Cart</button>
 				</div>
 				<div class="container col-sm-4 col-md-3 col-xs-6 col-xxs-12" style="margin-bottom: 10px">
-					<figure class="figure">	
-						<img class="image-responsive" src="../images/Soap.jpg" width="150" height="150" alt="Soap">
-						<figcaption class="figcaption">Soap</figcaption><br>
+					<figure class="figure cart-items">	
+						<img class="image-responsive item-image" src="../images/Soap.jpg" width="150" height="150" alt="Soap">
+						<figcaption class="figcaption">Soap</figcaption>
+						<span class="item-price">Rs 40</span>
 					</figure>
+					<button class="AddCart">Add to Cart</button>
 				</div>
 			
 			</div>
 		</div>
 	</div>
+	<h2>Cart of your Home-Essentials</h2>
+    <div id="Cart1" class="Cart-items container">
+
+        
+    </div>
+    <div class ="cart-total">
+        <strong class="cart-total-title"> Total:</strong>
+        <span class="cart-total-price">Rs 0 </span>
+    </div>
 	<footer>
 		<p>1453 Biddie Lane<br>Richmond<br>Virginia<br>23224</p><hr>
 		<p><a href="tel:18418714781">Tel:18418714781</a></p>

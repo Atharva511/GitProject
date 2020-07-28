@@ -18,6 +18,7 @@ header div button{
 	background-color: #344966;
 	border-color: #344966;
 	color: white;
+    cursor: pointer;
 
 }
 .dropdown {
@@ -25,20 +26,20 @@ header div button{
 	display: inline-block;
 	margin-right: 30px;
 	margin-top: 10px;
+    position: relative;
 }
-.dropdown-content {
+.dropdown-content { 
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 80px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  overflow: hidden;
 }
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+.show {
+    display: block;
+
 }
 header h1{
 	padding: 10px;
@@ -55,6 +56,7 @@ header img{
 }	
 .dropbtn img{
 	margin: 0px;
+    padding: 0px;
 }
 header{
 	margin-top: 0px;
@@ -148,6 +150,70 @@ a:hover {
 	text-align: center;
 	position: relative;
 }
+
+.Cart-items{
+    font-size: 1.2em;
+    text-align: center;
+
+}
+.cart-row{
+    display: flex;
+
+}
+.cart-price{
+    width: 20%;
+    font-size:1.2em;
+
+}
+.cart-item{
+    width: 45%;
+}
+.cart-quantity{
+    width: 35%
+}
+.cart-item-quantity{
+    height: 34px;
+    width: 50px;
+    text-align: center;
+
+}
+.cart-item-image{
+    width: 75px;
+    height: auto;
+}
+.remove-btn{
+    margin-left: 20px;
+    background-color: #344966;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+.AddCart{
+    background-color: #344966;
+    border:none;
+    border-radius: 3px;
+    color: white;
+}
+.cart-total{
+    text-align:end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.cart-total-title{
+    font-weight: bold;
+    font-size: 1.5em;
+
+}
+.cart-column{
+    display: flex;
+    align-items: center;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.cart-total-price{
+    font-size: 1.1em;
+}
 .col-xxs-1, .col-xxs-2, .col-xxs-3, .col-xxs-4,
 .col-xxs-5, .col-xxs-6, .col-xxs-7, .col-xxs-8,
 .col-xxs-9, .col-xxs-10, .col-xxs-11, .col-xxs-12 {
@@ -156,7 +222,81 @@ a:hover {
     padding-right: 15px;
     position: relative;
 }
+#Cart1{
+    width: 50%;
+}
+form { 
+    border: 3px solid #f1f1f1; 
+} 
+/*assign full width inputs*/ 
+  
+input[type=text], 
+input[type=password] { 
+    width: 100%; 
+    padding: 12px 20px; 
+    margin: 8px 0; 
+    display: inline-block; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+} 
+/*set a style for the buttons*/ 
+  
+.login-btn{ 
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 14px 20px; 
+    margin: 8px 0; 
+    border: none; 
+    cursor: pointer; 
+    width: 100%; 
+} 
+/* set a hover effect for the button*/ 
+  
+.login-btn:hover { 
+    opacity: 0.8; 
+} 
+/*set extra style for the cancel button*/ 
+  
+.cancelbtn { 
+    width: auto; 
+    padding: 10px 18px; 
+    background-color: #f44336; 
+} 
+/*centre the display image inside the container*/ 
+  
+.imgcontainer { 
+    text-align: center; 
+    margin: 24px 0 12px 0; 
+} 
+/*set image properties*/ 
+  
+img.avatar { 
+    width: 40%; 
+    border-radius: 50%; 
+} 
+/*set padding to the container*/ 
+  
+.container { 
+    padding: 16px; 
+} 
+/*set the forgot password text*/ 
+  
+span.psw { 
+    float: right; 
+    padding-top: 16px; 
 
+} 
+span.psw a {
+    text-decoration: underline;
+    color: blue;
+}
+span.psw a : link{
+    color: #0000EE;
+}
+
+span.psw a:visited {
+    color: #551A8B; 
+}
 @media (max-width: 384px) {
     .col-xxs-1,
     .col-xxs-2,
@@ -379,3 +519,12 @@ a:hover {
 footer{
 	margin-top: 50px;
 }
+@media screen and (max-width: 300px) { 
+        span.psw { 
+            display: block; 
+            float: none; 
+        } 
+        .cancelbtn { 
+            width: 100%; 
+        } 
+    } 

@@ -8,22 +8,21 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/script.js" async></script>
 </head>
 <body>
 	<header>
-		<div><img class="image-responsive" src="images/Icon1.png" alt="Icon"></div>
-		<div><a href="index.html"><h1>SUPERMART</h1></a></div>
-		<div class="dropdown">
-			<button class="dropbtn"><img src="images/Account.png"></button>
-			<div class ="dropdown-content">
-				<span>Log out!</span>
-			</div>
-		</div>
-		<div class="dropdown">
-			<button class="dropbtn "><img src="images/Cart.png"></button>
-			<div class="dropdown-content">
-			</div>
-		</div> 		
+        <div><img class="image-responsive" src="images/Icon1.png" alt="Icon"></div>
+        <div><a href="index.html"><h1>SUPERMART</h1></a></div>
+        <div class="dropdown">
+            <button onclick="AccountDetails()" class="dropbtn"><img src="images/Account.png"></button>
+            <div id="Account" class ="dropdown-content">
+                <span style="padding: 10px;padding-right: 0px; font-size: 1.1em;"><a href="snippets/Login.html"> Sign in!</a></span>
+                <span style="padding: 10px;padding-right: 0px; font-size: 1.1em;">Log out!</span>
+            </div>
+        </div>
+             
+    </header> 		
 	</header>
 	<div id="main-content" class="container">
 		<p>Welcome to Supermart! Happy Shopping!</p>
